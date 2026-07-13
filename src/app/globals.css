@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background: #fafaf7;
+  color: #18181b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.10), transparent 34rem),
+    linear-gradient(180deg, #ffffff 0%, #fafaf7 34%, #f7f7f2 100%);
+  color: #18181b;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.ranked-sheen {
+  background:
+    linear-gradient(135deg, rgba(20, 184, 166, 0.12), transparent 42%),
+    linear-gradient(315deg, rgba(37, 99, 235, 0.10), transparent 48%),
+    #ffffff;
+}
+
+@layer components {
+  .admin-input {
+    @apply h-12 w-full rounded-lg border border-line bg-white px-3 text-sm font-bold text-ink outline-none transition focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10;
+  }
+
+  .admin-textarea {
+    @apply min-h-28 w-full rounded-lg border border-line bg-white px-3 py-3 text-sm font-bold leading-6 text-ink outline-none transition focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10;
+  }
+}
